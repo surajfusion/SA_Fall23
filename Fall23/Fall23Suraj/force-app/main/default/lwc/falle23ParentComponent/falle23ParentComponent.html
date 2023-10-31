@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div onkeyup={handleKeyUp}>
+            <lightning-input
+                name="enter-search"
+                label="Sends when user hits the 'enter' key"
+                type="search"
+            ></lightning-input>
+        </div>
+    </lightning-card>
+
+    <c-fall23-child-component value-from-api={inputFromUser}></c-fall23-child-component>
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <!-- User Enters the Airport name-->
+        <lightning-input 
+            type="text" 
+            label="Enter Airport Name"
+            onchange={handleInputAirportName}
+        ></lightning-input>
+
+        <!--User hits the button to get the Airports details-->
+        <lightning-button 
+            variant="brand" 
+            label="Get Airport Details" title="Get Airport Details" 
+            onclick={handleClick} 
+            class="slds-m-left_x-small"
+        ></lightning-button>
+
+
+        <!--All Airports details will be visible to the User-->
+        <div style="height: 300px;">
+            <lightning-datatable
+                key-field="name"
+                data={data}
+                columns={columns}
+                show-row-number-column
+                hide-checkbox-column
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
