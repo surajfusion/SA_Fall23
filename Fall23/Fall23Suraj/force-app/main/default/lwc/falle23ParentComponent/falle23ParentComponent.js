@@ -3,6 +3,7 @@ import { LightningElement, track} from 'lwc';
 export default class Falle23ParentComponent extends LightningElement {
 
     @track inputFromUser;
+    @track likeState = false;
 
     handleKeyUp(event) {
         const isEnterKey = event.keyCode === 13;
@@ -13,5 +14,14 @@ export default class Falle23ParentComponent extends LightningElement {
         }
     }
 
-    
+
+    handleLikeButtonClick() {
+        this.likeState = !this.likeState;
+    }
+
+    handleLikeDislikeChildEvent(event){
+        const likedislikeValue = event.detail;
+        console.log('likedislikeValue', likedislikeValue);
+        this.likeState = likedislikeValue;
+    }
 }
