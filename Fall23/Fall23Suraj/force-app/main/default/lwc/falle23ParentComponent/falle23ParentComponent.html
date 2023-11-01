@@ -7,7 +7,16 @@
                 type="search"
             ></lightning-input>
         </div>
+
+        <lightning-button-icon-stateful 
+            icon-name="utility:like" 
+            selected={likeState} 
+            onclick={handleLikeButtonClick} 
+            alternative-text="Like"
+        ></lightning-button-icon-stateful>
     </lightning-card>
 
-    <c-fall23-child-component value-from-api={inputFromUser}></c-fall23-child-component>
+
+    <hr/>
+    <c-fall23-child-component value-from-api={inputFromUser} onselected={handleLikeDislikeChildEvent}></c-fall23-child-component>
 </template>
