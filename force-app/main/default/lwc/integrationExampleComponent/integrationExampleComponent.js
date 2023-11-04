@@ -4,6 +4,7 @@ import getResponseFromAPI from "@salesforce/apex/IntegrationExampleController.ge
 const columns = [
     { label: 'Name', fieldName: 'name' },
     { label: 'Region', fieldName: 'region' },
+    { label: 'City', fieldName: 'city' },
     { label: 'Country', fieldName: 'country' },
     { label: 'Timezone', fieldName: 'timezone'}
 ];
