@@ -18,6 +18,7 @@ export default class Fall23SOQLExampleComponent extends LightningElement {
             //TODO Send this data to HTML file to display.
             this.contacts = data;
         } else if (error) {
+
         }
     }
 }
