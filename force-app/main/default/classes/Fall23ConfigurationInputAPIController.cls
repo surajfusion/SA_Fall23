@@ -1,4 +1,3 @@
-
 public with sharing class Fall23ConfigurationInputAPIController {
     
     @AuraEnabled(cacheable = true)
